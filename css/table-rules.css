@@ -1,0 +1,87 @@
+/* 
+    Document   : table_rules
+    Created on : 20/08/2013, 3:38:24 PM
+    Author     : vichopuig
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@media only screen and (max-width: 800px) {
+    #unseen table td:nth-child(2),
+    #unseen table th:nth-child(2) {display: none;}
+}
+ 
+@media only screen and (max-width: 640px) {
+    #unseen table td:nth-child(4),
+    #unseen table th:nth-child(4),
+    #unseen table td:nth-child(7),
+    #unseen table th:nth-child(7),
+    #unseen table td:nth-child(8),
+    #unseen table th:nth-child(8){display: none;}
+}   
+@media only screen and (max-width: 640px){
+    select{
+        width:145px;
+        
+    }
+    input[type=file]{
+        width:122px;
+    }
+}
+@media only screen and (max-width: 640px) {
+    #unseen table td:nth-child(4),
+    #unseen table th:nth-child(4),
+    #unseen table td:nth-child(7),
+    #unseen table th:nth-child(7),
+    #unseen table td:nth-child(8),
+    #unseen table th:nth-child(8){display: none;}
+}   
+
+@media only screen and (max-width: 800px) {
+/* Force table to not be like tables anymore */
+#no-more-tables table,
+#no-more-tables thead,
+#no-more-tables tbody,
+#no-more-tables th,
+#no-more-tables td,
+#no-more-tables tr {
+display: block !important; 
+}
+ 
+/* Hide table headers (but not display: none;, for accessibility) */
+#no-more-tables thead tr {
+position: absolute !important;
+top: -9999px !important;
+left: -9999px !important;
+}
+ 
+/*#no-more-tables tr { border: 1px solid #ccc; }*/
+ 
+#no-more-tables td {
+/* Behave like a "row" */
+border: none !important;
+border-bottom: 1px solid #eee !important;
+position: relative !important;
+padding-left: 40% !important;
+white-space: normal !important;
+text-align:left !important;
+}
+ 
+#no-more-tables td:before {
+/* Now like a table header */
+position: absolute !important;
+/* Top/left values mimic padding */
+top: 6px !important;
+left: 6px !important;
+width: 45% !important;
+padding-right: 10px !important;
+white-space: nowrap !important;
+text-align:left !important;
+font-weight: bold !important;
+}
+ 
+/*
+Label the data
+*/
+#no-more-tables td:before { content: attr(data-title) !important; }
+}
